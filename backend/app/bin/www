@@ -7,7 +7,15 @@
 var app = require('../app');
 var debug = require('debug')('app:server');
 var http = require('http');
+const mongoose = require('mongoose');
 
+
+const mongodb_uri='mongodb://localhost:27017/mydb';
+
+
+  mongoose.connect(mongodb_uri, function(){
+    console.log('Mongodb is ready');
+  });	
 /**
  * Get port from environment and store in Express.
  */
