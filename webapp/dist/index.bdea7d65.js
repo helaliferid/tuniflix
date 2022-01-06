@@ -521,17 +521,33 @@ function hmrAcceptRun(bundle, id) {
 },{}],"7PGg5":[function(require,module,exports) {
 var _lib = require("./shell/lib");
 const output = document.querySelector('#output');
-_lib.getAllMovies(output);
+const displayMovies = async ()=>{
+    let movies = await _lib.getAllMovies();
+    for (let movie of movies){
+        let movieItem = document.createElement('li');
+        movieItem.innerHTML = `
+        <li class="list-group-item">${movie.title}</li>
+        <li class="list-group-item">${movie.description}</li>
+        <li class="list-group-item">${movie.year}</li>
+        <li class="list-group-item"><img src="${movie.cover}"></li>  
+        `;
+        output.appendChild(movieItem);
+    }
+};
+displayMovies();
 
 },{"./shell/lib":"8LQxg"}],"8LQxg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getAllMovies", ()=>getAllMovies
 );
-const getAllMovies = (anchor)=>{
-    fetch('http://localhost:3000/movies/all').then((response)=>response.json()
-    ).then((json)=>anchor.innerHTML = JSON.stringify(json, undefined, 2)
-    );
+const getAllMovies = async ()=>{
+    try {
+        let movies = await fetch('http://localhost:3000/movies/all');
+        return movies.json();
+    } catch (error) {
+        return error;
+    }
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"ciiiV":[function(require,module,exports) {
