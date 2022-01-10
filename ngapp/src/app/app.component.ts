@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngapp';
+  public movie:any='';
+
+  setMovie(_movie:{title:string,year:string}){
+    this.movie=_movie
+  }
+
+  log(){
+    console.log(this.movie)
+  }
+
 }
