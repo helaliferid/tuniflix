@@ -10,5 +10,4 @@ export class MyCardComponent{
     description:string='Le bateau qui a écoulé a cause d\'un iceburg '
     cover:string='https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/TitanicBeken.jpg/330px-TitanicBeken.jpg'
 
-
 }

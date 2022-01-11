@@ -2,6 +2,8 @@
 <button (click)="setMovie({title:'Brave Hart',year:'1995'})">Change Movie</button>
 <button (click)="log()">Log</button> -->
 
-
-<app-mycard></app-mycard>
+<div class="wrapper">
+    <app-mycard></app-mycard>
+    <app-movie-list></app-movie-list>
+</div>
 <router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let movie of movieList">
+        {{movie?.title}}
+        {{movie?.description}}
+        <img [src]="movie.cover" width="500px">
+    </li>
+</ul>
