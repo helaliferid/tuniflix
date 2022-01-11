@@ -1,1 +1,11 @@
-<p>movies-catalog works!</p>
+
+<div class="mycard" *ngFor="let movie of movies;let i=index">
+    <div class="card" style="width: 18rem;">
+        <img [src]="movie.cover" class="card-img-top" alt="cover">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">{{movie.description}}</p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+</div>
