@@ -1,0 +1,18 @@
+<div class="container">
+    <form>
+        <div class="mb-3">
+            <label for="title" class="form-label">Movie Title</label>
+            <input type="text" class="form-control" placeholder="type here ..." required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Movie Description</label>
+            <textarea class="form-control" rows="5"></textarea>
+        </div>
+    
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Please Choose an image</label>
+            <input class="form-control" type="file">
+          </div>
+    </form>
+    <button class="btn-primary" (click)="addMovie()">Add New Movie</button>
+</div>
