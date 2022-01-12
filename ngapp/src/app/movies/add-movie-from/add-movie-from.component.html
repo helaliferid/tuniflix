@@ -2,11 +2,22 @@
     <form>
         <div class="mb-3">
             <label for="title" class="form-label">Movie Title</label>
-            <input type="text" class="form-control" placeholder="type here ..." required>
+            <input 
+                type="text" 
+                class="form-control"
+                name="title" 
+                [(ngModel)]="movie.title"
+                placeholder="type here ..." 
+                required>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Movie Description</label>
-            <textarea class="form-control" rows="5"></textarea>
+            <textarea
+            name="description"
+                [(ngModel)]="movie.description" 
+                class="form-control" 
+                rows="5"
+                ></textarea>
         </div>
     
         <div class="mb-3">
@@ -16,3 +27,9 @@
     </form>
     <button class="btn-primary" (click)="addMovie()">Add New Movie</button>
 </div>
+
+<pre>
+    <code>
+    {{ movie | json }}
+</code>
+</pre>

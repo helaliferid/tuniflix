@@ -6,8 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-movie-from.component.scss']
 })
 export class AddMovieFromComponent implements OnInit {
+  movie:{
+    title:'',
+    description:''
+  }
 
-  constructor() { }
+  constructor() { 
+    this.movie={
+      title:'',
+      description:''
+    }
+  }
 
   addMovie(){
     console.log('addMovie Clicked')

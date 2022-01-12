@@ -7,6 +7,7 @@ import { MyCardComponent } from './my-card/mycard.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { AddMovieFromComponent } from './movies/add-movie-from/add-movie-from.component';
 import { MoviesCatalogComponent } from './movies/movies-catalog/movies-catalog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MoviesCatalogComponent } from './movies/movies-catalog/movies-catalog.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
