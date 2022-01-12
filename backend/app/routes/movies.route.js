@@ -9,4 +9,10 @@ router.get('/all',async function(req, res, next) {
    res.json(movies);
 });
 
+router.post('/add',async function(req,res){
+   let movie = req.body;
+   let result = await MovieService.addMovie(movie);
+   res.json({message:'Movie added Successfully',data:result});
+})
+
 module.exports = router;

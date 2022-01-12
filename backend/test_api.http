@@ -6,3 +6,15 @@ GET http://localhost:3000/users
 ###
 GET http://localhost:3000/movies/all
 
+###
+
+POST http://localhost:3000/movies/add
+content-type: application/json
+
+{
+    "title": "Pearl HARBOR",
+    "description": "II World Wide War",
+    "yeaar":1993,
+    "cover":"https://metro.co.uk/wp-content/uploads/2021/12/pearl-harbor-movie-511e.jpg?quality=90&strip=all&zoom=1&resize=644%2C483"
+}
+

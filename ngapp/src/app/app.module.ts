@@ -8,6 +8,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { AddMovieFromComponent } from './movies/add-movie-from/add-movie-from.component';
 import { MoviesCatalogComponent } from './movies/movies-catalog/movies-catalog.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
