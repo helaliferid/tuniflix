@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const MovieService = require('../services/movies.service');
-const upload = require('../services/upload.service').upload;
+const upload = require('../services/upload.service');
 
 
 /* GET users listing. */
