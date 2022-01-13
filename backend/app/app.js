@@ -4,11 +4,13 @@ var path = require('path');
 var logger = require('morgan');
 const cors= require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var moviesRouter = require('./routes/movies.route');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const moviesRouter = require('./routes/movies.route');
 
-var app = express();
+
+
+const app = express();
 
 
 
@@ -17,6 +19,7 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
